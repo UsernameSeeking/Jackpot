@@ -1,6 +1,8 @@
 'use strict'
 
 function start() {
+    document.getElementById('numb').style.animation = "numbdown 1.5s";
+    document.getElementById('startbutton').style.display = "none";
     var i;
     var count = 0;
     var check = 1;
@@ -30,10 +32,13 @@ function start() {
         else {
             if (check <= 0) {
                 check --;
-                if (check == -5) clearInterval(mainl);
+                if (check == -5) {
+                    clearInterval(mainl);
+                    document.getElementById('numb').style.animation = "";
+                    document.getElementById('startbutton').style.display = "block";
+                }
             }
             if (count == 38) check = 0;
         }
-        //a[0].style.animation = "test 1s linear";    
     }, 100);
 }

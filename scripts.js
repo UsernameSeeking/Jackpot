@@ -3,7 +3,7 @@
 function start() {
     document.getElementById('numb').style.animation = "numbdown 1.5s";
     document.getElementById('startbutton').style.display = "none";
-    document.getElementById('notibox').innerText = "Spinning..."
+    document.getElementById('notibox').innerText = "Đang quay..."
     document.getElementById('gift').style.display = "none";
     document.getElementById('giftbutton').style.display = "none";
     var color = Math.floor(Math.random() * 6);
@@ -43,12 +43,21 @@ function start() {
             if (check <= 0) {
                 check --;
                 if (check == -5) {
-                    clearInterval(mainl);
                     document.getElementById('numb').style.animation = "";
-                    //document.getElementById('startbutton').style.display = "block";
-                    document.getElementById('notibox').innerText = "Take your gift!";
+                    document.getElementById('notibox').innerText = "Mở quà đê!";
                     document.getElementById('gift').style.display = "block";
                     document.getElementById('giftbutton').style.display = "block";
+                    
+                    var c1 = document.getElementsByClassName('row1')[1].innerText;
+                    var c2 = document.getElementsByClassName('row2')[1].innerText;
+                    var c3 = document.getElementsByClassName('row3')[1].innerText;
+                    if (c1 == c2 && c1 == c3) {
+                        document.getElementById('starbox').style.display = "block";
+                    }
+                    else {
+                        document.getElementById('starbox').style.display = "none";
+                    }
+                    clearInterval(mainl);
                 }
             }
             if (count == 38) check = 0;
@@ -64,5 +73,6 @@ function opengift() {
 }
 
 function closegift() {
+    document.getElementById('notibox').innerText = "Kéo cần đê!";
     document.getElementById('giftcontentbox').style.display = "none";
 }

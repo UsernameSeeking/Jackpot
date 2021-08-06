@@ -125,16 +125,13 @@
 #giftcontent {
     width: 800px;
     height: 500px;
-    background-color: #A2D9FA;
+    background-color: #5D84A6;
     position: absolute;
     transform: translate(-50%, -50%);
     left: 50%;
     top: 50%;
 
-    border-style: solid;
-    border-radius: 20px;
-    border-color: #799AAD;
-    border-width: 6px;
+    border-radius: 10px;
 
     animation: giftcontent 0.2s linear;
     animation-fill-mode: forwards;
@@ -275,4 +272,23 @@
 }
 #firework6 .explosion::before {
     animation: explosion 1s .3s ease infinite;
+}
+
+.fireworkcolor1::before {
+    background-color: #6B5F8A;
+}
+.fireworkcolor2::before {
+    background-color: #8A435B;
+}
+.fireworkcolor3::before {
+    background-color: #6750A3;
+}
+.fireworkcolor4::before {
+    background-color: #D67495;
+}
+.fireworkcolor5::before {
+    background-color: #6C8A43;
+}
+.fireworkcolor6::before {
+    background-color: #D6A374;
 }
